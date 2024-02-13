@@ -2,10 +2,13 @@ import java.util.*;
 
 public class DeleteAndEarn {
     public static void main(String[] args) {
-
+        int[] nums = new int[] {2,2,3,3,3,4};
+        int ans = deleteAndEarn(nums);
+        //ans -> 9
+        System.out.println(ans);
     }
 
-    public int deleteAndEarn(int[] nums) {
+    private static int deleteAndEarn(int[] nums) {
         HashMap<Integer, Integer> distinctCounts = getDistinctCounts(nums);
         int[] arr = generateArray(distinctCounts);
         int[] dp = new int[arr.length];
@@ -13,7 +16,7 @@ public class DeleteAndEarn {
         return solve(arr, 0, dp, distinctCounts);
     }
 
-    private HashMap<Integer, Integer> getDistinctCounts(int[] nums) {
+    private static HashMap<Integer, Integer> getDistinctCounts(int[] nums) {
         HashMap<Integer, Integer> counts = new HashMap<>();
         for(int num : nums) {
             counts.put(num, counts.getOrDefault(num, 0) + 1);
@@ -21,7 +24,7 @@ public class DeleteAndEarn {
         return counts;
     }
 
-    private int solve(int[] arr, int index, int[] dp, HashMap<Integer, Integer> counts) {
+    private static int solve(int[] arr, int index, int[] dp, HashMap<Integer, Integer> counts) {
         if(index >= arr.length) {
             return 0;
         }
@@ -38,7 +41,7 @@ public class DeleteAndEarn {
         return dp[index];
     }
 
-    private int[] generateArray(HashMap<Integer, Integer> distinctCounts) {
+    private static int[] generateArray(HashMap<Integer, Integer> distinctCounts) {
         int len = distinctCounts.size();
         int[] arr = new int[len];
         int index = 0;
