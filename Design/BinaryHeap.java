@@ -1,4 +1,12 @@
 public class BinaryHeap {
+    /*
+        Design binary min heap using binomial array with functions as below:
+        1. insert(int val) -> inserts key in heap, complexity: O(logN)
+        2. getMin() -> retrieves min element from heap, complexity: O(1)
+        3. delete(int val) -> removes val from heap, complexity: O(logN)
+        4. decreaseValue(int key, int newValue) -> update the value at key to newValue (newValue < existingValue), complexity: O(logN)
+        5. extractMin() -> polls minimum element from heap, complexity: O(logN)
+     */
 
     public static void main(String[] args) {
         MinHeap minHeap = new MinHeap(50);
