@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class DeleteAndEarn {
+    /*
+        https://leetcode.com/problems/delete-and-earn/
+     */
     public static void main(String[] args) {
         int[] nums = new int[] {2,2,3,3,3,4};
         int ans = deleteAndEarn(nums);
