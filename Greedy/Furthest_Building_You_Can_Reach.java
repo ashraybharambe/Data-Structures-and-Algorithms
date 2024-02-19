@@ -10,7 +10,7 @@ public class Furthest_Building_You_Can_Reach {
         int[] heights = new int[] {4,2,7,6,9,14,12};
         int bricks = 5;
         int totalLadderes = 1;
-        int ans = furthestBuilding((heights, bricks, totalLadderes));
+        int ans = furthestBuilding(heights, bricks, totalLadderes);
         // ans = 4
         System.out.println(ans);
 
