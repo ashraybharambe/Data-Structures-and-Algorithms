@@ -10,10 +10,6 @@ public class Minimum_Cost_to_Merge_Stones {
         System.out.println(ans);
     }
 
-    public static int mergeStonesMemo(int[] stones, int K) {
-
-    }
-
     // Tabulation solution
     // Time complexity : O (N^3)
     // Space complexity : O (N^2)
